@@ -8,12 +8,14 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
-#### 1. Clone [Kalibr](https://github.com/ethz-asl/kalibr/wiki).
+#### 1. Clone [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 ````
 git clone https://github.com/ethz-asl/kalibr.git
 ````
 
-#### 2. Follow [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration) tutorial.
+#### 2. Create bagfile
+
+#### 3. Follow [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration) tutorial
 Ressource: https://vision.in.tum.de/research/vslam/double-sphere
 ````
 roslaunch pr2_camera_calibration throttle.launch
