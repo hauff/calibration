@@ -1,6 +1,6 @@
 # Calibration
 
-#### 1. Ressources
+### 1 Ressources
 - [PR2 Full System Calibration](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2)
 - [Calibrating the PR2's Cameras](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2's%20Cameras)
 - [How to Calibrate a Monocular Camera](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
@@ -8,11 +8,9 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
-#### 2. Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
+### 2 Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
-#### 2. Create bagfile
-
-#### 3. Follow [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration) tutorial
+#### 2.1 [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration)
 Ressource: https://vision.in.tum.de/research/vslam/double-sphere
 ````
 roslaunch pr2_camera_calibration throttle.launch
