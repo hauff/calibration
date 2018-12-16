@@ -1,7 +1,10 @@
-# pr2_camera_calibration
+# Calibration
 
-- http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2's%20Cameras
-- http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
+#### 1. Ressources
+- [PR2 Full System Calibration](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2)
+- [Calibrating the PR2's Cameras](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2's%20Cameras)
+- [How to Calibrate a Monocular Camera](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
+- [How to Calibrate a Stereo Camera](http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration)
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
