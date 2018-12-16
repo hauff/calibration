@@ -11,7 +11,6 @@ https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 ### 2 Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
 #### 2.1 [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration)
-Ressource: https://vision.in.tum.de/research/vslam/double-sphere
 ````
 roslaunch pr2_camera_calibration throttle.launch
 rosbag record /wide_stereo/right/image_color_throttle /head_mount_asus/rgb/image_raw_throttle -O calibration.bag
