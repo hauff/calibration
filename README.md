@@ -8,10 +8,7 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
-#### 1. Clone [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
-````
-git clone https://github.com/ethz-asl/kalibr.git
-````
+#### 2. Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
 #### 2. Create bagfile
 
