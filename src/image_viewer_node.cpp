@@ -10,17 +10,17 @@ using namespace calibration;
 
 void set_keyboard_non_blocking(struct termios& termios)
 {
-    struct termios termios_new;
-    tcgetattr(0, &termios);
+  struct termios termios_new;
+  tcgetattr(0, &termios);
 
-    termios_new = termios;
-    termios_new.c_lflag &= ~ICANON;
-    termios_new.c_lflag &= ~ECHO;
-    termios_new.c_lflag &= ~ISIG;
-    termios_new.c_cc[VMIN] = 0;
-    termios_new.c_cc[VTIME] = 0;
+  termios_new = termios;
+  termios_new.c_lflag &= ~ICANON;
+  termios_new.c_lflag &= ~ECHO;
+  termios_new.c_lflag &= ~ISIG;
+  termios_new.c_cc[VMIN] = 0;
+  termios_new.c_cc[VTIME] = 0;
 
-    tcsetattr(0, TCSANOW, &termios_new);
+  tcsetattr(0, TCSANOW, &termios_new);
 }
 
 void restore_keyboard_settings(const struct termios& termios)
