@@ -8,9 +8,16 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
-### Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
+### Camera Calibration with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
-#### [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration)
+#### Multiple Camera Calibration
+Follow this tutorial [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration).
+
+This repository provides the ImageViewer which allows you to collect images of multiple cameras. It will open a window for each given topic showing it's corresponding images. With key "s" you can save an image for each topic. The images are organized in one folder per topic. To create a ROS bag you can use the [bagcreater](https://github.com/ethz-asl/kalibr/wiki/bag-format) script.
+````
+roslaunch calibration image_viewer.launch topics:="[<topic1>, <topic2>, ...]"
+````
+
 ````
 roslaunch pr2_camera_calibration throttle.launch
 rosbag record /wide_stereo/right/image_color_throttle /head_mount_asus/rgb/image_raw_throttle -O calibration.bag
