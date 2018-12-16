@@ -1,6 +1,6 @@
 # Calibration
 
-### 1 Ressources
+### Ressources
 - [PR2 Full System Calibration](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2)
 - [Calibrating the PR2's Cameras](http://wiki.ros.org/pr2_calibration/Tutorials/Calibrating%20the%20PR2's%20Cameras)
 - [How to Calibrate a Monocular Camera](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
@@ -8,9 +8,9 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
-### 2 Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
+### Calibrate cameras with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
-#### 2.1 [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration)
+#### [Multiple Camera Calibration](https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration)
 ````
 roslaunch pr2_camera_calibration throttle.launch
 rosbag record /wide_stereo/right/image_color_throttle /head_mount_asus/rgb/image_raw_throttle -O calibration.bag
