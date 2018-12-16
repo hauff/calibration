@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <node name="throttle_wide_stereo" pkg="topic_tools" type="throttle" output="screen"
+  	args="messages /wide_stereo/right/image_rect 1.0"/>
+
+  <node name="throttle_asus" pkg="topic_tools" type="throttle" output="screen"
+  	args="messages /head_mount_asus/rgb/image_rect_mono 1.0"/>
+
+</launch>

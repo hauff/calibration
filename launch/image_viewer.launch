@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <arg name="topics"/>
+
+  <node name="image_viewer" pkg="calibration" type="image_viewer_node" output="screen">
+    <rosparam param="topics" subst_value="True">$(arg topics)</rosparam>
+  </node>
+
+</launch>
