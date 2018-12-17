@@ -42,13 +42,15 @@ std::string now()
 
 void save(const std::vector<ImageViewer::Ptr>& viewers, const std::string& root_dir)
 {
+  ros::Time t = ros::Time::now();
+
   for (size_t i = 0; i < viewers.size(); i++)
     viewers[i]->stop();
 
   for (size_t i = 0; i < viewers.size(); i++)
   {
     std::stringstream ss;
-    ss << root_dir << "/cam" << i << "/" << ros::Time::now().toNSec() << ".png";
+    ss << root_dir << "/cam" << i << "/" << t.toNSec() << ".png";
     viewers[i]->save(ss.str());
   }
 
@@ -72,7 +74,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "image_viewer");
   ros::NodeHandle nh, nh_private("~");
 
-  std::string root_dir = now();
+  std::string root_dir = "/home/eitel/workspaces/calibration/data/" + now();
   std::vector<std::string> topics;
   if (!nh_private.getParam("topics", topics))
   {

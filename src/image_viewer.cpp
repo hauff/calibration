@@ -2,6 +2,8 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <boost/filesystem.hpp>
 
+#include <sensor_msgs/image_encodings.h>
+
 namespace calibration
 {
 
@@ -70,7 +72,12 @@ void ImageViewer::callbackImage(const sensor_msgs::ImageConstPtr& image_msg)
 {
   try
   {
-    cv_image_ptr_ = cv_bridge::toCvCopy(image_msg, "bgr8");
+
+    cv_image_ptr_ = cv_bridge::toCvCopy(image_msg);//"bgr8");
+    
+    if (topic_.find("ir") != std::string::npos)
+      cv_image_ptr_->image.convertTo(cv_image_ptr_->image, -1, 500, 0);
+
     cv::imshow(topic_, cv_image_ptr_->image);
     cv::waitKey(25);
   }
