@@ -15,13 +15,16 @@ roslaunch pr2_calibration_launch calibrate_wide_stereo.launch
 ```
 ### Narrow Stereo
 ```
-
+rosrun camera_calibration cameracheck.py stereo:=narrow_stereo --size=7x6 --square=0.108
+roslaunch pr2_calibration_launch calibrate_narrow_stereo.launch
 ```
 ### Asus
 - http://wiki.ros.org/topic_tools
 ```
 rosrun topic_tools relay /head_mount_asus/rgb/image_rect_mono asus/image_rect
-#rosrun topic_tools relay /head_mount_asus/rgb/camera_info asus/camera_info
+rosrun topic_tools relay /head_mount_asus/rgb/camera_info asus/camera_info
+
+rosrun camera_calibration cameracheck.py monocular:=asus --size=7x6 --square=0.108
 ```
 
 
