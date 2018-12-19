@@ -19,6 +19,7 @@ rosrun camera_calibration cameracheck.py stereo:=narrow_stereo --size=7x6 --squa
 roslaunch pr2_calibration_launch calibrate_narrow_stereo.launch
 ```
 ### Forearm Cameras
+Probably it is K[0] to check focal length.
 ```
 rosrun camera_calibration cameracheck.py monocular:=l_forearm_cam --size=7x6 --square=0.108
 rostopic echo l_forearm_cam/camera_info/P[0]
