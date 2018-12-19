@@ -1,5 +1,5 @@
-before: Linearity RMS Error: 0.202 Pixels	Reprojection RMS Error: 0.235 Pixels
-after:	Linearity RMS Error: 0.131 Pixels   Reprojection RMS Error: 0.223 Pixels
+before: Linearity RMS Error: 0.202 Pixels   Reprojection RMS Error: 0.235 Pixels
+after:  Linearity RMS Error: 0.131 Pixels   Reprojection RMS Error: 0.223 Pixels
 
 
 ('D = ', [-0.31867843578353267, 0.09255062816759298, 0.0002837017488155422, -0.000904687809760233, 0.0])
