@@ -8,6 +8,8 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
+image_pipeline  nodelet_core  pluginlib  pr2_apps  pr2_calibration  vision_opencv
+
 ### Wide Stereo
 ```
 rosrun camera_calibration cameracheck.py stereo:=wide_stereo --size=7x6 --square=0.108
