@@ -1,0 +1,14 @@
+before: Linearity RMS Error: 0.126 Pixels	Reprojection RMS Error: 0.140 Pixels
+
+skipped calibration
+
+
+height: 480
+width: 640
+distortion_model: plumb_bob
+D: [-0.30865000000000004, 0.08597, -0.00018, 0.00201, 0.0]
+K: [426.24971, 0.0, 318.03523, 0.0, 424.46369, 238.78823, 0.0, 0.0, 1.0]
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+P: [337.47244, 0.0, 319.95275, 0.0, 0.0, 376.69418, 237.83812, 0.0, 0.0, 0.0, 1.0, 0.0]
+binning_x: 0
+binning_y: 0
