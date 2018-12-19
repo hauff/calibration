@@ -18,6 +18,17 @@ roslaunch pr2_calibration_launch calibrate_wide_stereo.launch
 rosrun camera_calibration cameracheck.py stereo:=narrow_stereo --size=7x6 --square=0.108
 roslaunch pr2_calibration_launch calibrate_narrow_stereo.launch
 ```
+### Forearm Cameras
+```
+rosrun camera_calibration cameracheck.py monocular:=l_forearm_cam --size=7x6 --square=0.108
+rostopic echo l_forearm_cam/camera_info/P[0]
+roslaunch pr2_calibration_launch calibrate_forearm_left.launch
+
+rosrun camera_calibration cameracheck.py monocular:=r_forearm_cam --size=7x6 --square=0.108
+rostopic echo r_forearm_cam/camera_info/P[0]
+roslaunch pr2_calibration_launch calibrate_forearm_right.launch
+```
+
 ### Asus
 - http://wiki.ros.org/topic_tools
 ```
