@@ -1,0 +1,1762 @@
+rosrun pr2_calibration_launch estimate_pr2_beta_urdf.sh
+Checking if we can write to ./robot_calibrated.xml...
+Success
+... logging to /home/eitel/.ros/log/a91d503a-03ca-11e9-8260-001517bf033d/roslaunch-c1-7509.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://c1:33586/
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /calibration_config/
+
+PARAMETERS
+ * /calibration_config/base_link: torso_lift_link
+ * /calibration_config/cal_steps/A - 00 - Estimating Checkerboard Locations/free_params: <...>
+ * /calibration_config/cal_steps/A - 00 - Estimating Checkerboard Locations/output_filename: head_laser_0
+ * /calibration_config/cal_steps/A - 00 - Estimating Checkerboard Locations/sensors: ['left_arm_chain'...
+ * /calibration_config/cal_steps/A - 00 - Estimating Checkerboard Locations/use_cov: False
+ * /calibration_config/cal_steps/A - 01 - Adding Stereocam Locations/free_params: <...>
+ * /calibration_config/cal_steps/A - 01 - Adding Stereocam Locations/output_filename: head_laser_1
+ * /calibration_config/cal_steps/A - 01 - Adding Stereocam Locations/sensors: ['narrow_left_rec...
+ * /calibration_config/cal_steps/A - 01 - Adding Stereocam Locations/use_cov: True
+ * /calibration_config/cal_steps/A - 02 - Adding Stereo Baselines/free_params: <...>
+ * /calibration_config/cal_steps/A - 02 - Adding Stereo Baselines/output_filename: head_laser_2
+ * /calibration_config/cal_steps/A - 02 - Adding Stereo Baselines/sensors: ['narrow_left_rec...
+ * /calibration_config/cal_steps/A - 02 - Adding Stereo Baselines/use_cov: True
+ * /calibration_config/cal_steps/A - 03 - Adding Laser Pose/free_params: <...>
+ * /calibration_config/cal_steps/A - 03 - Adding Laser Pose/output_filename: head_laser_3
+ * /calibration_config/cal_steps/A - 03 - Adding Laser Pose/sensors: ['narrow_left_rec...
+ * /calibration_config/cal_steps/A - 03 - Adding Laser Pose/use_cov: True
+ * /calibration_config/cal_steps/A - 04 - Computing Prosilica location relative to other head sensors/free_params: <...>
+ * /calibration_config/cal_steps/A - 04 - Computing Prosilica location relative to other head sensors/output_filename: head_laser_calibr...
+ * /calibration_config/cal_steps/A - 04 - Computing Prosilica location relative to other head sensors/sensors: ['narrow_left_rec...
+ * /calibration_config/cal_steps/A - 04 - Computing Prosilica location relative to other head sensors/use_cov: True
+ * /calibration_config/cal_steps/B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets/free_params: <...>
+ * /calibration_config/cal_steps/B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets/output_filename: system_calibrated
+ * /calibration_config/cal_steps/B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets/sensors: ['narrow_left_rec...
+ * /calibration_config/cal_steps/B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets/use_cov: True
+ * /calibration_config/checkerboards/large_cb_7x6/corners_x: 7
+ * /calibration_config/checkerboards/large_cb_7x6/corners_y: 6
+ * /calibration_config/checkerboards/large_cb_7x6/spacing_x: 0.108
+ * /calibration_config/checkerboards/large_cb_7x6/spacing_y: 0.108
+ * /calibration_config/checkerboards/small_cb_4x5/corners_x: 4
+ * /calibration_config/checkerboards/small_cb_4x5/corners_y: 5
+ * /calibration_config/checkerboards/small_cb_4x5/spacing_x: 0.0245
+ * /calibration_config/checkerboards/small_cb_4x5/spacing_y: 0.0245
+ * /calibration_config/sensors/chains/head_chain/cov/joint_angles: [0.0002, 0.0002]
+ * /calibration_config/sensors/chains/head_chain/gearing: [1.0, 1.0]
+ * /calibration_config/sensors/chains/head_chain/root: torso_lift_link
+ * /calibration_config/sensors/chains/head_chain/tip: head_tilt_link
+ * /calibration_config/sensors/chains/left_arm_chain/cov/joint_angles: [0.001, 0.001, 0....
+ * /calibration_config/sensors/chains/left_arm_chain/gearing: [1.0, 1.0, 1.0, 1...
+ * /calibration_config/sensors/chains/left_arm_chain/root: torso_lift_link
+ * /calibration_config/sensors/chains/left_arm_chain/tip: l_wrist_roll_link
+ * /calibration_config/sensors/chains/right_arm_chain/cov/joint_angles: [0.001, 0.001, 0....
+ * /calibration_config/sensors/chains/right_arm_chain/gearing: [1.0, 1.0, 1.0, 1...
+ * /calibration_config/sensors/chains/right_arm_chain/root: torso_lift_link
+ * /calibration_config/sensors/chains/right_arm_chain/tip: r_wrist_roll_link
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/chain_id: left_arm_chain
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_left_rect/frame_id: l_forearm_cam_opt...
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/chain_id: right_arm_chain
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/forearm_right_rect/frame_id: r_forearm_cam_opt...
+ * /calibration_config/sensors/rectified_cams/kinect_head/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/kinect_head/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/kinect_head/cov/u: 0.25
+ * /calibration_config/sensors/rectified_cams/kinect_head/cov/v: 0.25
+ * /calibration_config/sensors/rectified_cams/kinect_head/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/kinect_head/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/kinect_head/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/kinect_head/frame_id: head_mount_kinect...
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_left_rect/frame_id: narrow_stereo_opt...
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/narrow_right_rect/frame_id: narrow_stereo_opt...
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/cov/u: 0.25
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/cov/v: 0.25
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/prosilica_rect/frame_id: high_def_optical_...
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_left_rect/frame_id: wide_stereo_optic...
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/baseline_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/chain_id: head_chain
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/cov/u: 0.125
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/cov/v: 0.125
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/cx_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/cy_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/f_shift: 0.0
+ * /calibration_config/sensors/rectified_cams/wide_right_rect/frame_id: wide_stereo_optic...
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/cov/bearing: 0.0005
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/cov/range: 0.005
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/cov/tilt: 0.0005
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/frame_id: laser_tilt_link
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/gearing: 1.0
+ * /calibration_config/sensors/tilting_lasers/tilt_laser/joint: laser_tilt_mount_...
+ * /calibration_config/transforms/left_arm_chain_cb: [0.25, 0, 0, 'pi/...
+ * /calibration_config/transforms/right_arm_chain_cb: [0.25, 0, 0, '-pi...
+ * /rosdistro: indigo
+ * /rosversion: 1.11.16
+
+NODES
+
+ROS_MASTER_URI=http://c1:11311
+
+core service [/rosout] found
+No processes to monitor
+shutting down processing monitor...
+... shutting down processing monitor complete
+Starting The Multi Step [Covariance] Estimator Node
+
+Using Bagfile: /tmp/pr2_calibration/cal_measurements.bag
+
+The following error sensors have been loaded:
+
+  chains sensors
+   - head_chain
+   - left_arm_chain
+   - right_arm_chain
+
+  rectified_cams sensors
+   - forearm_left_rect
+   - forearm_right_rect
+   - kinect_head
+   - narrow_left_rect
+   - narrow_right_rect
+   - prosilica_rect
+   - wide_left_rect
+   - wide_right_rect
+
+  tilting_lasers sensors
+   - tilt_laser
+
+Loaded the calibration steps to execute in the following order:
+ - A - 00 - Estimating Checkerboard Locations
+ - A - 01 - Adding Stereocam Locations
+ - A - 02 - Adding Stereo Baselines
+ - A - 03 - Adding Laser Pose
+ - A - 04 - Computing Prosilica location relative to other head sensors
+ - B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Unknown attribute: type
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Unknown attribute: type
+Unknown attribute: type
+Material has neither a color nor texture
+Unknown attribute: type
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+[WARN] [WallTime: 1545250471.638855] Transform not found in URDF right_arm_chain_cb
+[WARN] [WallTime: 1545250471.639473] Transform not found in URDF left_arm_chain_cb
+
+******************************
+Beginning [A - 00 - Estimating Checkerboard Locations]
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+
+  chains Sensors:
+   - left_arm_chain (32)
+   - right_arm_chain (32)
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser
+  1) tilt_laser
+  2) tilt_laser
+  3) tilt_laser
+  4) tilt_laser
+  5) tilt_laser
+  6) tilt_laser
+  7) tilt_laser, left_arm_chain
+  8) tilt_laser, left_arm_chain
+  9) left_arm_chain
+  10) left_arm_chain
+  11) left_arm_chain
+  12) left_arm_chain
+  13) left_arm_chain
+  14) tilt_laser, left_arm_chain
+  15) left_arm_chain
+  16) left_arm_chain
+  17) tilt_laser, left_arm_chain
+  18) left_arm_chain
+  19) left_arm_chain
+  20) left_arm_chain
+  21) left_arm_chain
+  22) left_arm_chain
+  23) left_arm_chain
+  24) left_arm_chain
+  25) left_arm_chain
+  26) left_arm_chain
+  27) left_arm_chain
+  28) left_arm_chain
+  29) left_arm_chain
+  30) left_arm_chain
+  31) left_arm_chain
+  32) left_arm_chain
+  33) tilt_laser, left_arm_chain
+  34) tilt_laser, left_arm_chain
+  35) tilt_laser, left_arm_chain
+  36) left_arm_chain
+  37) left_arm_chain
+  38) left_arm_chain
+  39) tilt_laser, right_arm_chain
+  40) tilt_laser, right_arm_chain
+  41) right_arm_chain
+  42) right_arm_chain
+  43) right_arm_chain
+  44) right_arm_chain
+  45) right_arm_chain
+  46) tilt_laser, right_arm_chain
+  47) right_arm_chain
+  48) right_arm_chain
+  49) tilt_laser, right_arm_chain
+  50) right_arm_chain
+  51) right_arm_chain
+  52) right_arm_chain
+  53) right_arm_chain
+  54) right_arm_chain
+  55) right_arm_chain
+  56) right_arm_chain
+  57) right_arm_chain
+  58) right_arm_chain
+  59) right_arm_chain
+  60) right_arm_chain
+  61) right_arm_chain
+  62) right_arm_chain
+  63) right_arm_chain
+  64) right_arm_chain
+  65) tilt_laser, right_arm_chain
+  66) tilt_laser, right_arm_chain
+  67) tilt_laser, right_arm_chain
+  68) right_arm_chain
+  69) right_arm_chain
+  70) right_arm_chain
+Pose Guesses:
+[[ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.]]
+Executing step without covariance calculations
+/opt/ros/indigo/lib/python2.7/dist-packages/calibration_estimation/opt_runner.py:58: SyntaxWarning: The publisher should be created with an explicit keyword argument 'queue_size'. Please see http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers for more information.
+  self.marker_pub = rospy.Publisher("pose_guesses", Marker)
+Computing Jacobian.. (cycle #12)	RMS error: 0.003    
+Errors Breakdown:
+  left_arm_chain: 0.003213
+  tilt_laser: 0.006577
+  right_arm_chain: 0.002369
+
+******************************
+Beginning [A - 01 - Adding Stereocam Locations]
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+   - narrow_left_rect (47)
+   - narrow_right_rect (47)
+   - wide_left_rect (39)
+   - wide_right_rect (39)
+
+  chains Sensors:
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  1) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  2) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  3) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  4) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  5) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  6) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  7) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  8) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  9) narrow_left_rect, narrow_right_rect
+  10) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  11) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  12) wide_left_rect, wide_right_rect
+  13) narrow_left_rect, narrow_right_rect
+  14) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  15) narrow_left_rect, narrow_right_rect
+  16) narrow_left_rect, narrow_right_rect
+  17) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  18) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  19) wide_left_rect, wide_right_rect
+  20) wide_left_rect, wide_right_rect
+  21) narrow_left_rect, narrow_right_rect
+  22) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  23) 
+  24) 
+  25) 
+  26) 
+  27) 
+  28) 
+  29) narrow_left_rect, narrow_right_rect
+  30) 
+  31) 
+  32) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  33) tilt_laser, wide_left_rect, wide_right_rect
+  34) tilt_laser, narrow_left_rect, narrow_right_rect
+  35) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  36) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  37) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  38) narrow_left_rect, narrow_right_rect
+  39) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  40) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  41) narrow_left_rect, narrow_right_rect
+  42) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  43) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  44) wide_left_rect, wide_right_rect
+  45) narrow_left_rect, narrow_right_rect
+  46) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  47) narrow_left_rect, narrow_right_rect
+  48) narrow_left_rect, narrow_right_rect
+  49) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  50) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  51) wide_left_rect, wide_right_rect
+  52) wide_left_rect, wide_right_rect
+  53) narrow_left_rect, narrow_right_rect
+  54) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  55) 
+  56) 
+  57) 
+  58) 
+  59) 
+  60) 
+  61) narrow_left_rect, narrow_right_rect
+  62) 
+  63) 
+  64) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  65) tilt_laser, wide_left_rect, wide_right_rect
+  66) tilt_laser, narrow_left_rect, narrow_right_rect
+  67) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  68) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  69) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  70) narrow_left_rect, narrow_right_rect
+Pose Guesses:
+[[  2.83985959e+00   8.01085537e-02  -3.55926824e-01  -1.22490693e+00
+   -1.07301261e+00   1.12935406e+00]
+ [  2.83125683e+00  -4.86029173e-01  -3.58724906e-01  -1.14414640e+00
+   -1.17618316e+00   1.25339901e+00]
+ [  2.74395115e+00   5.18604362e-01  -3.53485130e-01  -1.17461271e+00
+   -1.14633021e+00   1.21712047e+00]
+ [  2.44287088e+00   2.42271241e-02  -5.40608888e-01  -4.37834461e-01
+   -4.62560765e-01   1.56333817e+00]
+ [  1.79026195e+00   6.33936545e-03  -3.33419377e-01  -1.19602536e+00
+   -1.20546522e+00   1.21199348e+00]
+ [  1.74388510e+00  -1.12501944e-01  -3.32556857e-01  -1.12829055e+00
+   -1.20548758e+00   1.28244792e+00]
+ [  1.71845677e+00   1.57148328e-01  -3.31328800e-01  -1.12531100e+00
+   -1.22117765e+00   1.28280990e+00]
+ [  7.46293990e-01   9.20607543e-02   3.45110225e-01  -8.38740582e-02
+   -1.53123328e+00  -1.85671067e-01]
+ [  7.11200132e-01   4.42106351e-01   3.44755714e-01   1.99074618e-01
+   -1.53199654e+00   1.81153776e-01]
+ [  2.63466269e-01   8.86671277e-01   3.48696711e-01   7.41737468e-01
+   -1.45962982e+00   8.77717467e-01]
+ [  2.20055359e-01   8.09379692e-01   3.67887610e-01   8.99787755e-01
+   -1.02460191e+00   1.09505802e+00]
+ [  1.82842714e-01   6.40360646e-01   3.97543368e-01   5.24722017e-01
+   -1.40984301e+00   1.28581535e+00]
+ [ -1.88718427e-01   5.81083747e-01   4.18322307e-01   1.93930272e-01
+   -1.80636403e+00   2.09980972e+00]
+ [ -2.92446444e-01   8.29842359e-01   3.44202961e-02   2.46033984e-01
+   -1.91360810e+00   2.25999910e+00]
+ [  6.23807575e-01   3.81182606e-01   3.33213933e-01   2.89727503e-01
+   -1.14965253e+00   1.05443649e+00]
+ [  7.03547629e-01   4.25017398e-01   2.43910821e-01  -5.55195374e-01
+   -1.24580149e+00   3.32842318e-01]
+ [  7.73532316e-01   4.72266211e-01  -8.38361056e-02   1.90982362e-01
+   -7.72752913e-01   6.27641216e-01]
+ [  5.03334065e-01   4.92823679e-03  -2.74672613e-01   4.84582415e-01
+   -1.26250063e-01  -1.66610124e+00]
+ [  4.90219042e-01   2.25482213e-01  -2.50697781e-01   8.53205573e-01
+    3.52581904e-01  -1.81493668e+00]
+ [  5.52569656e-01  -3.69383888e-01   2.41037855e-01   8.91488040e-01
+   -1.94132390e+00  -1.01379684e+00]
+ [  5.94263286e-01  -2.42933414e-01   3.89080341e-01   1.24683054e-01
+   -1.80250720e+00  -6.65680438e-01]
+ [  7.78908619e-01   1.84620184e-01   3.52787080e-01  -8.05846881e-01
+   -1.51107928e+00   1.97135673e-01]
+ [  7.26191642e-01   4.64555818e-01   2.97413094e-02   1.63490953e+00
+    2.05805513e+00  -3.34363601e+00]
+ [  7.07865458e-01   1.64338252e-01  -3.51926811e-01   2.11837853e+00
+   -6.03516884e-01  -2.27158214e+00]
+ [  7.15462519e-01   1.80015162e-01  -3.63198154e-01   2.29159062e+00
+   -1.15768113e+00  -2.33459763e+00]
+ [  7.03630566e-01   2.10699206e-01  -3.77939276e-01   2.03853090e+00
+   -2.06087028e-01  -2.31828287e+00]
+ [  6.50000195e-01   1.94409282e-01  -3.60093649e-01   1.87564813e+00
+   -6.30968864e-01  -2.59163005e+00]
+ [  7.22282090e-01   1.12845635e-01   7.95071175e-03   1.51638264e+00
+   -9.08365684e-01  -5.30574832e-01]
+ [  7.68004614e-01   3.56879277e-01  -3.52197276e-04   1.67558413e+00
+   -5.89031422e-01  -2.62279607e-01]
+ [  5.56391153e-01   4.94681185e-01   2.64935534e-02   1.75303171e+00
+   -5.73404981e-01  -1.34681685e-01]
+ [  5.40998767e-01   4.53052731e-01   1.85504333e-01   2.02631583e+00
+   -1.29877980e+00   8.46870372e-01]
+ [  6.16788122e-01   4.86836812e-01   1.42034870e-01   1.99791173e+00
+   -1.03464417e+00   7.11955534e-01]
+ [  8.22573535e-01   4.26095260e-01   2.77886621e-01   5.70952532e-01
+   -1.18030803e+00   6.01925025e-02]
+ [  4.88648512e-01   1.11592511e-01   2.52263846e-01   9.17279872e-01
+   -1.37767577e+00   5.10024161e-01]
+ [  6.00881664e-01   2.24890549e-01   1.16191338e-01   3.73303944e-01
+   -1.88357899e+00   4.00061734e-01]
+ [  6.63176718e-01  -2.67232118e-01  -3.21206353e-02   6.55727809e-01
+   -8.81230440e-01  -1.42153605e+00]
+ [  3.98970710e-01  -4.19034651e-01   1.30928217e-01   2.12707294e-01
+   -1.04993410e+00  -2.02605838e+00]
+ [  4.08498596e-01   5.30418021e-01   2.92809603e-02   1.26226992e+00
+    1.92949278e+00  -3.22428007e+00]
+ [  7.87262494e-01   3.63158012e-02  -1.52940775e-01   6.66083037e-01
+   -5.57336149e-01  -1.35130308e+00]
+ [  7.54280322e-01  -8.69795325e-02   3.48286540e-01   8.23067525e-02
+   -1.55856734e+00   2.97454437e-01]
+ [  7.23759417e-01  -4.41076641e-01   3.48916202e-01  -2.48816097e-01
+   -1.53036493e+00  -1.25067504e-01]
+ [  2.72877836e-01  -8.91007641e-01   3.52482387e-01  -7.88379471e-01
+   -1.44161136e+00  -8.19344712e-01]
+ [  2.28192286e-01  -8.16598378e-01   3.68178560e-01  -9.31041092e-01
+   -1.00331012e+00  -1.03130954e+00]
+ [  1.90663255e-01  -6.47176531e-01   4.01232157e-01  -5.71909235e-01
+   -1.39657783e+00  -1.22769582e+00]
+ [ -1.88275981e-01  -5.90743053e-01   4.23677126e-01  -2.63344327e-01
+   -1.78929366e+00  -2.05289036e+00]
+ [ -2.94291198e-01  -8.39332012e-01   3.97809568e-02  -3.19645100e-01
+   -1.89054077e+00  -2.21590153e+00]
+ [  6.37252853e-01  -3.90818862e-01   3.34862953e-01  -3.13744537e-01
+   -1.15645001e+00  -1.00987669e+00]
+ [  7.12395392e-01  -4.19677173e-01   2.48113381e-01   5.16942136e-01
+   -1.27562965e+00  -2.78164406e-01]
+ [  7.83989501e-01  -4.72073549e-01  -8.70860731e-02  -2.14259120e-01
+   -7.79028724e-01  -5.62477939e-01]
+ [  4.97280227e-01  -7.55707475e-04  -2.87014156e-01  -4.68845892e-01
+   -1.32660030e-01   1.76036275e+00]
+ [  4.87595320e-01  -2.30803301e-01  -2.59883366e-01  -8.33087153e-01
+    3.80350818e-01   1.87740650e+00]
+ [  5.59928889e-01   3.77609184e-01   2.39959142e-01  -9.52797664e-01
+   -1.93031264e+00   1.06560865e+00]
+ [  5.99287299e-01   2.52735242e-01   3.90317305e-01  -1.76023944e-01
+   -1.81604827e+00   7.20279203e-01]
+ [  7.84939680e-01  -1.79006850e-01   3.60153509e-01   7.60450540e-01
+   -1.54940919e+00  -1.49745126e-01]
+ [  7.35534082e-01  -4.70136860e-01   3.14029376e-02  -1.58686392e+00
+    2.18890056e+00   3.33719488e+00]
+ [  7.17465106e-01  -1.66840721e-01  -3.56769320e-01  -2.15302635e+00
+   -5.34520799e-01   2.31948776e+00]
+ [  7.25671733e-01  -1.78237317e-01  -3.67126544e-01  -2.35276330e+00
+   -1.08893035e+00   2.37301848e+00]
+ [  7.11983977e-01  -2.15851545e-01  -3.82993556e-01  -2.05734960e+00
+   -1.34965755e-01   2.36820016e+00]
+ [  6.58478122e-01  -1.96598118e-01  -3.66822774e-01  -1.91069434e+00
+   -5.69245976e-01   2.64480245e+00]
+ [  7.32214150e-01  -1.15324773e-01   3.86312103e-03  -1.54225246e+00
+   -8.69130167e-01   5.91526329e-01]
+ [  7.76283818e-01  -3.63035606e-01  -4.27428940e-03  -1.69020860e+00
+   -5.43841742e-01   3.23034902e-01]
+ [  5.64340618e-01  -5.01715550e-01   2.36278876e-02  -1.76668851e+00
+   -5.25510135e-01   1.94391625e-01]
+ [  5.46085306e-01  -4.59755139e-01   1.92487164e-01  -2.06179470e+00
+   -1.23441473e+00  -7.99074791e-01]
+ [  6.22659490e-01  -4.94880205e-01   1.46760196e-01  -2.02448632e+00
+   -9.73609906e-01  -6.59924821e-01]
+ [  8.33355219e-01  -4.23937228e-01   2.75881862e-01  -6.05055460e-01
+   -1.17360305e+00   2.95264620e-03]
+ [  5.05683839e-01  -1.18489607e-01   2.55183241e-01  -9.48137614e-01
+   -1.35462299e+00  -4.80710063e-01]
+ [  6.11780686e-01  -2.24747392e-01   1.16780077e-01  -4.67057458e-01
+   -1.89069064e+00  -3.85002047e-01]
+ [  6.53467617e-01   2.65296570e-01  -3.40285309e-02  -7.03947808e-01
+   -8.46408029e-01   1.48140012e+00]
+ [  3.97237954e-01   4.24562413e-01   1.21576968e-01  -2.32470252e-01
+   -1.05772616e+00   2.09193664e+00]
+ [  4.15654971e-01  -5.38545385e-01   3.10167632e-02  -1.20598033e+00
+    2.03412808e+00   3.23613964e+00]
+ [  7.89367547e-01  -3.35404662e-02  -1.62700902e-01  -6.74306709e-01
+   -5.48271245e-01   1.41872673e+00]]
+Executing step with covariance calculations
+Computing Jacobian.. (cycle #13)	RMS error: 3.495     
+Errors Breakdown:
+  narrow_left_rect: 0.795823
+  narrow_right_rect: 0.679773
+  tilt_laser: 0.017738
+  wide_right_rect: 0.464986
+  wide_left_rect: 0.404703
+
+******************************
+Beginning [A - 02 - Adding Stereo Baselines]
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+   - narrow_left_rect (47)
+   - narrow_right_rect (47)
+   - wide_left_rect (39)
+   - wide_right_rect (39)
+
+  chains Sensors:
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  1) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  2) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  3) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  4) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  5) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  6) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  7) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  8) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  9) narrow_left_rect, narrow_right_rect
+  10) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  11) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  12) wide_left_rect, wide_right_rect
+  13) narrow_left_rect, narrow_right_rect
+  14) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  15) narrow_left_rect, narrow_right_rect
+  16) narrow_left_rect, narrow_right_rect
+  17) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  18) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  19) wide_left_rect, wide_right_rect
+  20) wide_left_rect, wide_right_rect
+  21) narrow_left_rect, narrow_right_rect
+  22) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  23) 
+  24) 
+  25) 
+  26) 
+  27) 
+  28) 
+  29) narrow_left_rect, narrow_right_rect
+  30) 
+  31) 
+  32) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  33) tilt_laser, wide_left_rect, wide_right_rect
+  34) tilt_laser, narrow_left_rect, narrow_right_rect
+  35) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  36) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  37) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  38) narrow_left_rect, narrow_right_rect
+  39) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  40) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  41) narrow_left_rect, narrow_right_rect
+  42) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  43) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  44) wide_left_rect, wide_right_rect
+  45) narrow_left_rect, narrow_right_rect
+  46) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  47) narrow_left_rect, narrow_right_rect
+  48) narrow_left_rect, narrow_right_rect
+  49) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  50) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  51) wide_left_rect, wide_right_rect
+  52) wide_left_rect, wide_right_rect
+  53) narrow_left_rect, narrow_right_rect
+  54) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  55) 
+  56) 
+  57) 
+  58) 
+  59) 
+  60) 
+  61) narrow_left_rect, narrow_right_rect
+  62) 
+  63) 
+  64) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  65) tilt_laser, wide_left_rect, wide_right_rect
+  66) tilt_laser, narrow_left_rect, narrow_right_rect
+  67) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  68) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  69) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  70) narrow_left_rect, narrow_right_rect
+Pose Guesses:
+[[  2.83062932e+00   7.93375193e-02  -3.67620758e-01  -1.22302188e+00
+   -1.06217910e+00   1.13190914e+00]
+ [  2.82276928e+00  -4.88357107e-01  -3.69157686e-01  -1.13669495e+00
+   -1.16772072e+00   1.25816362e+00]
+ [  2.73623540e+00   5.20943980e-01  -3.64756841e-01  -1.16712283e+00
+   -1.13726152e+00   1.22058644e+00]
+ [  2.44948907e+00   2.41596717e-02  -5.35008356e-01  -4.36085510e-01
+   -4.66786063e-01   1.56332650e+00]
+ [  1.79584350e+00   6.14935774e-03  -3.29621550e-01  -1.19135667e+00
+   -1.20107887e+00   1.21428797e+00]
+ [  1.74821977e+00  -1.13488107e-01  -3.28401468e-01  -1.12709564e+00
+   -1.20270729e+00   1.28024601e+00]
+ [  1.72283732e+00   1.58603099e-01  -3.27112231e-01  -1.12626831e+00
+   -1.21438766e+00   1.28394760e+00]
+ [  7.62009875e-01   9.10027549e-02   3.44407693e-01  -1.63134709e-01
+   -1.48749823e+00  -2.52986055e-01]
+ [  7.17640762e-01   4.48730369e-01   3.42328441e-01   1.21468769e-01
+   -1.49774719e+00   1.43685682e-01]
+ [  2.66561014e-01   9.16055689e-01   3.36932950e-01   6.92252800e-01
+   -1.42111990e+00   9.09345921e-01]
+ [  2.22395270e-01   8.35775444e-01   3.49792660e-01   8.84942056e-01
+   -1.01545111e+00   1.08349869e+00]
+ [  1.91690247e-01   6.56846878e-01   3.88470042e-01   5.34269715e-01
+   -1.40036190e+00   1.26711170e+00]
+ [ -1.90855247e-01   5.93616615e-01   4.13765568e-01   2.33981787e-01
+   -1.82515535e+00   2.10054680e+00]
+ [ -3.02222146e-01   8.55999371e-01   2.62086939e-02   2.30889743e-01
+   -1.91697292e+00   2.25984468e+00]
+ [  6.28510386e-01   3.88837070e-01   3.29093056e-01   3.17018029e-01
+   -1.12544587e+00   1.06345649e+00]
+ [  7.23837408e-01   4.17314258e-01   2.33691769e-01  -5.76377829e-01
+   -1.21971934e+00   3.22903891e-01]
+ [  7.92916438e-01   4.87471474e-01  -9.89569088e-02   1.84450785e-01
+   -7.91131663e-01   6.15000456e-01]
+ [  5.29322528e-01   7.47387151e-03  -2.94558699e-01   4.36860856e-01
+   -2.51214757e-01  -1.67774926e+00]
+ [  5.08292644e-01   2.38497600e-01  -2.60370140e-01   8.20952450e-01
+    3.33380158e-01  -1.79843516e+00]
+ [  5.63638209e-01  -3.79171151e-01   2.53141903e-01   8.82542367e-01
+   -1.92662964e+00  -1.03731209e+00]
+ [  6.10309915e-01  -2.55322670e-01   3.93872625e-01   1.23124723e-01
+   -1.76182900e+00  -6.79870291e-01]
+ [  8.02418664e-01   1.76077113e-01   3.52052206e-01  -8.33046326e-01
+   -1.47525442e+00   1.94446839e-01]
+ [  7.47987564e-01   4.71318742e-01   2.01198810e-02   1.66932533e+00
+    2.05369161e+00  -3.33410377e+00]
+ [  7.07865458e-01   1.64338252e-01  -3.51926811e-01   2.11837853e+00
+   -6.03516884e-01  -2.27158214e+00]
+ [  7.15462519e-01   1.80015162e-01  -3.63198154e-01   2.29159062e+00
+   -1.15768113e+00  -2.33459763e+00]
+ [  7.03630566e-01   2.10699206e-01  -3.77939276e-01   2.03853090e+00
+   -2.06087028e-01  -2.31828287e+00]
+ [  6.50000195e-01   1.94409282e-01  -3.60093649e-01   1.87564813e+00
+   -6.30968864e-01  -2.59163005e+00]
+ [  7.22282090e-01   1.12845635e-01   7.95071175e-03   1.51638264e+00
+   -9.08365684e-01  -5.30574832e-01]
+ [  7.68004614e-01   3.56879277e-01  -3.52197276e-04   1.67558413e+00
+   -5.89031422e-01  -2.62279607e-01]
+ [  5.63426600e-01   5.18914787e-01   3.18323317e-02   1.73024024e+00
+   -5.53877597e-01  -1.37633228e-01]
+ [  5.40998767e-01   4.53052731e-01   1.85504333e-01   2.02631583e+00
+   -1.29877980e+00   8.46870372e-01]
+ [  6.16788122e-01   4.86836812e-01   1.42034870e-01   1.99791173e+00
+   -1.03464417e+00   7.11955534e-01]
+ [  8.42216032e-01   4.40157793e-01   2.61170969e-01   5.59368620e-01
+   -1.15962966e+00   6.24487617e-02]
+ [  5.02562384e-01   1.17364317e-01   2.52982293e-01   9.36658059e-01
+   -1.37753064e+00   4.85892219e-01]
+ [  6.17571536e-01   2.36586841e-01   1.19874661e-01   3.99629216e-01
+   -1.86678743e+00   4.09746554e-01]
+ [  6.88640563e-01  -2.75733939e-01  -4.22074628e-02   5.78448490e-01
+   -8.76939732e-01  -1.46336560e+00]
+ [  4.08675700e-01  -4.37964277e-01   1.26212888e-01   2.13116776e-01
+   -1.02254086e+00  -2.01891865e+00]
+ [  4.27748650e-01   5.45374276e-01   3.03365909e-02   1.26644260e+00
+    1.97674231e+00  -3.19961558e+00]
+ [  8.13561705e-01   4.19541225e-02  -1.54331956e-01   6.41052749e-01
+   -5.85910784e-01  -1.34122894e+00]
+ [  7.58025959e-01  -8.73192483e-02   3.46792659e-01   1.00196881e-01
+   -1.52925173e+00   2.95854990e-01]
+ [  7.15289583e-01  -4.38227517e-01   3.45196926e-01  -1.86429516e-01
+   -1.53437376e+00  -8.99057008e-02]
+ [  2.75733039e-01  -9.04356851e-01   3.38910678e-01  -7.62975577e-01
+   -1.41699947e+00  -8.50537519e-01]
+ [  2.31303144e-01  -8.30956519e-01   3.53752049e-01  -9.23371924e-01
+   -1.02057953e+00  -1.03605652e+00]
+ [  1.93714810e-01  -6.65701692e-01   3.88102849e-01  -5.34952823e-01
+   -1.38615230e+00  -1.25968532e+00]
+ [ -1.89730720e-01  -6.03897876e-01   4.10011703e-01  -2.29691585e-01
+   -1.78072400e+00  -2.10507668e+00]
+ [ -2.92853825e-01  -8.49838889e-01   2.50942692e-02  -2.87781263e-01
+   -1.90017380e+00  -2.25581533e+00]
+ [  6.31836482e-01  -3.94129004e-01   3.29300093e-01  -3.33685892e-01
+   -1.11062420e+00  -1.05714500e+00]
+ [  7.25187217e-01  -4.20247962e-01   2.36548954e-01   5.42395733e-01
+   -1.25656044e+00  -3.07784264e-01]
+ [  7.96497917e-01  -4.76490806e-01  -8.93636891e-02  -2.13240337e-01
+   -7.95003357e-01  -5.85693520e-01]
+ [  5.18983733e-01   4.42093599e-04  -3.08161713e-01  -4.46497255e-01
+   -2.25800302e-01   1.78162166e+00]
+ [  5.03522593e-01  -2.46640005e-01  -2.67642838e-01  -8.25151880e-01
+    3.88600204e-01   1.87089795e+00]
+ [  5.72336907e-01   3.77941636e-01   2.42412455e-01  -9.53409194e-01
+   -1.93183046e+00   1.09124349e+00]
+ [  6.08920292e-01   2.53099215e-01   3.91346143e-01  -1.78774954e-01
+   -1.80893622e+00   7.28616390e-01]
+ [  7.94364197e-01  -1.84255961e-01   3.57503455e-01   7.66272551e-01
+   -1.54404205e+00  -1.76648709e-01]
+ [  7.41327012e-01  -4.75443823e-01   2.44691502e-02  -1.52927369e+00
+    2.15370484e+00   3.33978212e+00]
+ [  7.17465106e-01  -1.66840721e-01  -3.56769320e-01  -2.15302635e+00
+   -5.34520799e-01   2.31948776e+00]
+ [  7.25671733e-01  -1.78237317e-01  -3.67126544e-01  -2.35276330e+00
+   -1.08893035e+00   2.37301848e+00]
+ [  7.11983977e-01  -2.15851545e-01  -3.82993556e-01  -2.05734960e+00
+   -1.34965755e-01   2.36820016e+00]
+ [  6.58478122e-01  -1.96598118e-01  -3.66822774e-01  -1.91069434e+00
+   -5.69245976e-01   2.64480245e+00]
+ [  7.32214150e-01  -1.15324773e-01   3.86312103e-03  -1.54225246e+00
+   -8.69130167e-01   5.91526329e-01]
+ [  7.76283818e-01  -3.63035606e-01  -4.27428940e-03  -1.69020860e+00
+   -5.43841742e-01   3.23034902e-01]
+ [  5.71270314e-01  -5.12678277e-01   2.38500817e-02  -1.75410475e+00
+   -5.31573153e-01   2.01866290e-01]
+ [  5.46085306e-01  -4.59755139e-01   1.92487164e-01  -2.06179470e+00
+   -1.23441473e+00  -7.99074791e-01]
+ [  6.22659490e-01  -4.94880205e-01   1.46760196e-01  -2.02448632e+00
+   -9.73609906e-01  -6.59924821e-01]
+ [  8.40081926e-01  -4.34462639e-01   2.66619355e-01  -6.06074987e-01
+   -1.16195023e+00  -1.30010110e-02]
+ [  5.16180546e-01  -1.25912659e-01   2.57106424e-01  -9.51242672e-01
+   -1.33347760e+00  -4.96048703e-01]
+ [  6.17761148e-01  -2.31846481e-01   1.18628447e-01  -4.41026583e-01
+   -1.89095497e+00  -3.84850303e-01]
+ [  6.81919029e-01   2.75643221e-01  -4.67118242e-02  -6.23307136e-01
+   -8.76679347e-01   1.53675020e+00]
+ [  4.07338696e-01   4.32408358e-01   1.13239465e-01  -2.71880423e-01
+   -1.03489845e+00   2.10087442e+00]
+ [  4.30753982e-01  -5.43915856e-01   2.51877352e-02  -1.23983882e+00
+    1.98256840e+00   3.21560952e+00]
+ [  8.03173365e-01  -3.41637944e-02  -1.65133061e-01  -6.54245673e-01
+   -5.71342344e-01   1.44368065e+00]]
+Executing step with covariance calculations
+Computing Jacobian.. (cycle #9) 	RMS error: 3.444    
+Errors Breakdown:
+  narrow_left_rect: 0.769722
+  narrow_right_rect: 0.652475
+  tilt_laser: 0.016998
+  wide_right_rect: 0.448531
+  wide_left_rect: 0.400059
+
+******************************
+Beginning [A - 03 - Adding Laser Pose]
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+   - narrow_left_rect (47)
+   - narrow_right_rect (47)
+   - wide_left_rect (39)
+   - wide_right_rect (39)
+
+  chains Sensors:
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  1) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  2) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  3) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  4) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  5) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  6) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  7) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  8) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  9) narrow_left_rect, narrow_right_rect
+  10) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  11) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  12) wide_left_rect, wide_right_rect
+  13) narrow_left_rect, narrow_right_rect
+  14) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  15) narrow_left_rect, narrow_right_rect
+  16) narrow_left_rect, narrow_right_rect
+  17) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  18) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  19) wide_left_rect, wide_right_rect
+  20) wide_left_rect, wide_right_rect
+  21) narrow_left_rect, narrow_right_rect
+  22) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  23) 
+  24) 
+  25) 
+  26) 
+  27) 
+  28) 
+  29) narrow_left_rect, narrow_right_rect
+  30) 
+  31) 
+  32) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  33) tilt_laser, wide_left_rect, wide_right_rect
+  34) tilt_laser, narrow_left_rect, narrow_right_rect
+  35) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  36) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  37) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  38) narrow_left_rect, narrow_right_rect
+  39) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  40) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  41) narrow_left_rect, narrow_right_rect
+  42) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  43) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  44) wide_left_rect, wide_right_rect
+  45) narrow_left_rect, narrow_right_rect
+  46) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  47) narrow_left_rect, narrow_right_rect
+  48) narrow_left_rect, narrow_right_rect
+  49) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  50) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  51) wide_left_rect, wide_right_rect
+  52) wide_left_rect, wide_right_rect
+  53) narrow_left_rect, narrow_right_rect
+  54) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  55) 
+  56) 
+  57) 
+  58) 
+  59) 
+  60) 
+  61) narrow_left_rect, narrow_right_rect
+  62) 
+  63) 
+  64) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  65) tilt_laser, wide_left_rect, wide_right_rect
+  66) tilt_laser, narrow_left_rect, narrow_right_rect
+  67) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  68) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  69) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  70) narrow_left_rect, narrow_right_rect
+Pose Guesses:
+[[  2.83109162e+00   7.93452155e-02  -3.67519986e-01  -1.22412081e+00
+   -1.06241964e+00   1.13099325e+00]
+ [  2.82324668e+00  -4.88182949e-01  -3.69075920e-01  -1.13693984e+00
+   -1.16901179e+00   1.25822774e+00]
+ [  2.73672979e+00   5.20802842e-01  -3.64674816e-01  -1.16814422e+00
+   -1.13737953e+00   1.21970618e+00]
+ [  2.44989830e+00   2.41622573e-02  -5.35105412e-01  -4.35873264e-01
+   -4.66659128e-01   1.56339149e+00]
+ [  1.79640395e+00   6.15020610e-03  -3.29998219e-01  -1.19211024e+00
+   -1.20188520e+00   1.21378508e+00]
+ [  1.74878973e+00  -1.13450774e-01  -3.28791560e-01  -1.12763949e+00
+   -1.20378289e+00   1.27996146e+00]
+ [  1.72343388e+00   1.58546867e-01  -3.27514318e-01  -1.12707966e+00
+   -1.21518526e+00   1.28339958e+00]
+ [  7.60698800e-01   9.08909567e-02   3.44324434e-01  -1.70615869e-01
+   -1.49007816e+00  -2.58858138e-01]
+ [  7.16374737e-01   4.48094744e-01   3.42234260e-01   1.14932120e-01
+   -1.50120978e+00   1.37432302e-01]
+ [  2.65788963e-01   9.13522819e-01   3.37070845e-01   6.83121423e-01
+   -1.43247462e+00   8.96094290e-01]
+ [  2.22008438e-01   8.34036540e-01   3.49779464e-01   8.82327762e-01
+   -9.93580151e-01   1.09810870e+00]
+ [  1.91364753e-01   6.55867577e-01   3.88210542e-01   5.17029880e-01
+   -1.40606728e+00   1.25264947e+00]
+ [ -1.90673008e-01   5.92773768e-01   4.13478598e-01   2.24377552e-01
+   -1.82635922e+00   2.09170810e+00]
+ [ -3.01178713e-01   8.53551364e-01   2.73574070e-02   2.27545681e-01
+   -1.92587154e+00   2.24882431e+00]
+ [  6.27574261e-01   3.88156998e-01   3.29032412e-01   3.22349527e-01
+   -1.12008748e+00   1.06880501e+00]
+ [  7.21974639e-01   4.16259575e-01   2.34285594e-01  -5.80837973e-01
+   -1.22008440e+00   3.18465242e-01]
+ [  7.90641723e-01   4.86299121e-01  -9.76806572e-02   1.90619052e-01
+   -7.69147005e-01   6.22060307e-01]
+ [  5.27957840e-01   7.47314765e-03  -2.92825097e-01   4.43212513e-01
+   -2.30839247e-01  -1.67432274e+00]
+ [  5.06741750e-01   2.37688306e-01  -2.58457343e-01   8.23033498e-01
+    3.46997966e-01  -1.79364445e+00]
+ [  5.62066799e-01  -3.78489521e-01   2.53448522e-01   8.85602987e-01
+   -1.93098472e+00  -1.03304795e+00]
+ [  6.09148231e-01  -2.54880393e-01   3.93520990e-01   1.25448701e-01
+   -1.77509689e+00  -6.75766819e-01]
+ [  8.00301635e-01   1.75669934e-01   3.52034809e-01  -8.38171425e-01
+   -1.47688914e+00   1.89232435e-01]
+ [  7.46213921e-01   4.69882352e-01   2.11007574e-02   1.69883738e+00
+    2.05392153e+00  -3.32365433e+00]
+ [  7.07865458e-01   1.64338252e-01  -3.51926811e-01   2.11837853e+00
+   -6.03516884e-01  -2.27158214e+00]
+ [  7.15462519e-01   1.80015162e-01  -3.63198154e-01   2.29159062e+00
+   -1.15768113e+00  -2.33459763e+00]
+ [  7.03630566e-01   2.10699206e-01  -3.77939276e-01   2.03853090e+00
+   -2.06087028e-01  -2.31828287e+00]
+ [  6.50000195e-01   1.94409282e-01  -3.60093649e-01   1.87564813e+00
+   -6.30968864e-01  -2.59163005e+00]
+ [  7.22282090e-01   1.12845635e-01   7.95071175e-03   1.51638264e+00
+   -9.08365684e-01  -5.30574832e-01]
+ [  7.68004614e-01   3.56879277e-01  -3.52197276e-04   1.67558413e+00
+   -5.89031422e-01  -2.62279607e-01]
+ [  5.61804423e-01   5.17471866e-01   3.28360113e-02   1.73392480e+00
+   -5.54510613e-01  -1.35696393e-01]
+ [  5.40998767e-01   4.53052731e-01   1.85504333e-01   2.02631583e+00
+   -1.29877980e+00   8.46870372e-01]
+ [  6.16788122e-01   4.86836812e-01   1.42034870e-01   1.99791173e+00
+   -1.03464417e+00   7.11955534e-01]
+ [  8.40519253e-01   4.39328374e-01   2.61386628e-01   5.81625281e-01
+   -1.15355637e+00   7.97176325e-02]
+ [  5.01645195e-01   1.16991328e-01   2.52969520e-01   9.41141883e-01
+   -1.37892607e+00   4.87788065e-01]
+ [  6.16622751e-01   2.36154919e-01   1.20154927e-01   4.01013846e-01
+   -1.86995063e+00   4.09565683e-01]
+ [  6.87134100e-01  -2.75050757e-01  -4.14329566e-02   5.93827979e-01
+   -8.75985110e-01  -1.45448927e+00]
+ [  4.08060534e-01  -4.37346156e-01   1.26336494e-01   1.96633994e-01
+   -1.00913931e+00  -2.02891144e+00]
+ [  4.26810181e-01   5.44025805e-01   3.11086984e-02   1.28470445e+00
+    1.98640972e+00  -3.18848271e+00]
+ [  8.11477730e-01   4.19753573e-02  -1.53003273e-01   6.47919838e-01
+   -5.56014696e-01  -1.33412274e+00]
+ [  7.56724096e-01  -8.72100750e-02   3.46702585e-01   1.07570000e-01
+   -1.53263365e+00   3.01498278e-01]
+ [  7.14010773e-01  -4.37606020e-01   3.45098303e-01  -1.80063098e-01
+   -1.53854795e+00  -8.38010161e-02]
+ [  2.74965146e-01  -9.01892688e-01   3.39030165e-01  -7.55586173e-01
+   -1.42832744e+00  -8.38462113e-01]
+ [  2.30913828e-01  -8.29274206e-01   3.53708283e-01  -9.25221940e-01
+   -9.97224704e-01  -1.05397255e+00]
+ [  1.93381025e-01  -6.64638552e-01   3.87857422e-01  -5.17854223e-01
+   -1.39082686e+00  -1.24601282e+00]
+ [ -1.89556302e-01  -6.03042534e-01   4.09742037e-01  -2.18113705e-01
+   -1.78102640e+00  -2.09622910e+00]
+ [ -2.91810438e-01  -8.47432404e-01   2.62412417e-02  -2.84402219e-01
+   -1.90906011e+00  -2.24496792e+00]
+ [  6.30889241e-01  -3.93415261e-01   3.29239541e-01  -3.38809132e-01
+   -1.10495802e+00  -1.06259348e+00]
+ [  7.23326900e-01  -4.19131543e-01   2.37133611e-01   5.46760665e-01
+   -1.25713540e+00  -3.03527698e-01]
+ [  7.94227343e-01  -4.75339724e-01  -8.81288708e-02  -2.21003669e-01
+   -7.72029387e-01  -5.94103708e-01]
+ [  5.17698439e-01   4.20447806e-04  -3.06425332e-01  -4.52645674e-01
+   -2.06781896e-01   1.77825193e+00]
+ [  5.02004223e-01  -2.45769267e-01  -2.65691027e-01  -8.26873233e-01
+    4.02878251e-01   1.86570348e+00]
+ [  5.70688264e-01   3.77245094e-01   2.42792953e-01  -9.56269626e-01
+   -1.93588272e+00   1.08681331e+00]
+ [  6.07679586e-01   2.52646607e-01   3.91022193e-01  -1.82895363e-01
+   -1.82064044e+00   7.22954148e-01]
+ [  7.92281571e-01  -1.83767028e-01   3.57458969e-01   7.71243663e-01
+   -1.54583970e+00  -1.71699901e-01]
+ [  7.39596861e-01  -4.73966176e-01   2.54154966e-02  -1.56203421e+00
+    2.15609945e+00   3.32796701e+00]
+ [  7.17465106e-01  -1.66840721e-01  -3.56769320e-01  -2.15302635e+00
+   -5.34520799e-01   2.31948776e+00]
+ [  7.25671733e-01  -1.78237317e-01  -3.67126544e-01  -2.35276330e+00
+   -1.08893035e+00   2.37301848e+00]
+ [  7.11983977e-01  -2.15851545e-01  -3.82993556e-01  -2.05734960e+00
+   -1.34965755e-01   2.36820016e+00]
+ [  6.58478122e-01  -1.96598118e-01  -3.66822774e-01  -1.91069434e+00
+   -5.69245976e-01   2.64480245e+00]
+ [  7.32214150e-01  -1.15324773e-01   3.86312103e-03  -1.54225246e+00
+   -8.69130167e-01   5.91526329e-01]
+ [  7.76283818e-01  -3.63035606e-01  -4.27428940e-03  -1.69020860e+00
+   -5.43841742e-01   3.23034902e-01]
+ [  5.69638583e-01  -5.11244880e-01   2.48929980e-02  -1.75780865e+00
+   -5.32403666e-01   1.99968967e-01]
+ [  5.46085306e-01  -4.59755139e-01   1.92487164e-01  -2.06179470e+00
+   -1.23441473e+00  -7.99074791e-01]
+ [  6.22659490e-01  -4.94880205e-01   1.46760196e-01  -2.02448632e+00
+   -9.73609906e-01  -6.59924821e-01]
+ [  8.38355812e-01  -4.33611261e-01   2.66817212e-01  -6.32819430e-01
+   -1.16384093e+00  -3.05306664e-02]
+ [  5.15135986e-01  -1.25487628e-01   2.57095264e-01  -9.55597549e-01
+   -1.33443253e+00  -4.98176376e-01]
+ [  6.16815012e-01  -2.31430971e-01   1.18911158e-01  -4.42138114e-01
+   -1.89398344e+00  -3.84570461e-01]
+ [  6.80449917e-01   2.74978588e-01  -4.59361997e-02  -6.39343038e-01
+   -8.78638149e-01   1.52737148e+00]
+ [  4.06758365e-01   4.31846101e-01   1.13367024e-01  -2.52562017e-01
+   -1.03101567e+00   2.11007070e+00]
+ [  4.29802144e-01  -5.42568288e-01   2.59871919e-02  -1.25838107e+00
+    1.99230361e+00   3.20454068e+00]
+ [  8.01304196e-01  -3.42078762e-02  -1.63895015e-01  -6.50517041e-01
+   -5.40576852e-01   1.44075400e+00]]
+Executing step with covariance calculations
+Computing Jacobian.. (cycle #9) 	RMS error: 3.444    
+Errors Breakdown:
+  narrow_left_rect: 0.774217
+  narrow_right_rect: 0.648444
+  tilt_laser: 0.017028
+  wide_right_rect: 0.441667
+  wide_left_rect: 0.400178
+
+******************************
+Beginning [A - 04 - Computing Prosilica location relative to other head sensors]
+[ERROR] [WallTime: 1545251280.825244] Could not find [kinect_torso] in block library. Skipping this block
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+   - narrow_left_rect (47)
+   - narrow_right_rect (47)
+   - prosilica_rect (11)
+   - wide_left_rect (39)
+   - wide_right_rect (39)
+
+  chains Sensors:
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  1) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  2) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  3) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  4) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  5) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  6) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  7) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  8) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  9) narrow_left_rect, narrow_right_rect
+  10) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  11) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  12) wide_left_rect, wide_right_rect
+  13) narrow_left_rect, narrow_right_rect
+  14) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  15) narrow_left_rect, narrow_right_rect
+  16) narrow_left_rect, narrow_right_rect
+  17) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  18) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  19) wide_left_rect, wide_right_rect
+  20) wide_left_rect, wide_right_rect
+  21) narrow_left_rect, narrow_right_rect
+  22) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  23) 
+  24) 
+  25) 
+  26) 
+  27) 
+  28) 
+  29) narrow_left_rect, narrow_right_rect
+  30) 
+  31) 
+  32) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  33) tilt_laser, wide_left_rect, wide_right_rect
+  34) tilt_laser, narrow_left_rect, narrow_right_rect
+  35) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  36) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  37) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  38) narrow_left_rect, narrow_right_rect
+  39) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  40) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect, prosilica_rect
+  41) narrow_left_rect, narrow_right_rect
+  42) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  43) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  44) wide_left_rect, wide_right_rect
+  45) narrow_left_rect, narrow_right_rect
+  46) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  47) narrow_left_rect, narrow_right_rect
+  48) narrow_left_rect, narrow_right_rect
+  49) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  50) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  51) wide_left_rect, wide_right_rect
+  52) wide_left_rect, wide_right_rect
+  53) narrow_left_rect, narrow_right_rect
+  54) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  55) 
+  56) 
+  57) 
+  58) 
+  59) 
+  60) 
+  61) narrow_left_rect, narrow_right_rect
+  62) 
+  63) 
+  64) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  65) tilt_laser, wide_left_rect, wide_right_rect
+  66) tilt_laser, narrow_left_rect, narrow_right_rect
+  67) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  68) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  69) narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  70) narrow_left_rect, narrow_right_rect
+Pose Guesses:
+[[  2.82813012e+00   5.42853689e-02  -3.81271958e-01  -1.22354787e+00
+   -1.04990901e+00   1.13013660e+00]
+ [  2.81544366e+00  -5.13293501e-01  -3.81550659e-01  -1.13717274e+00
+   -1.15588933e+00   1.25608164e+00]
+ [  2.73750605e+00   4.96652070e-01  -3.78671336e-01  -1.16745531e+00
+   -1.12479383e+00   1.21863577e+00]
+ [  2.44600747e+00   2.25630748e-03  -5.46162522e-01  -4.33824880e-01
+   -4.56603346e-01   1.55747202e+00]
+ [  1.79372379e+00  -9.83063568e-03  -3.36087014e-01  -1.19249725e+00
+   -1.18906941e+00   1.21341556e+00]
+ [  1.74514866e+00  -1.29044001e-01  -3.34176134e-01  -1.12791620e+00
+   -1.19106035e+00   1.27910646e+00]
+ [  1.72199404e+00   1.43176638e-01  -3.33509070e-01  -1.12721398e+00
+   -1.20236931e+00   1.28270048e+00]
+ [  7.62345331e-01   8.49988552e-02   3.46151813e-01  -1.76585412e-01
+   -1.48264162e+00  -2.61087152e-01]
+ [  7.18954090e-01   4.41830373e-01   3.44055827e-01   1.04054470e-01
+   -1.50004316e+00   1.32024080e-01]
+ [  2.72976993e-01   9.11183249e-01   3.37820439e-01   6.70907969e-01
+   -1.42982337e+00   8.93461537e-01]
+ [  2.28517030e-01   8.32189144e-01   3.51165121e-01   8.71667682e-01
+   -9.90790178e-01   1.09346220e+00]
+ [  1.96350668e-01   6.54602806e-01   3.90952953e-01   5.05707665e-01
+   -1.40099456e+00   1.24993162e+00]
+ [ -1.86370814e-01   5.94140321e-01   4.16776154e-01   2.10961000e-01
+   -1.81868913e+00   2.09324352e+00]
+ [ -2.94133756e-01   8.56025136e-01   2.76960353e-02   2.13593121e-01
+   -1.91797634e+00   2.25224451e+00]
+ [  6.29846915e-01   3.82766787e-01   3.31540057e-01   3.21834277e-01
+   -1.11317125e+00   1.06546678e+00]
+ [  7.24760372e-01   4.10098300e-01   2.35829424e-01  -5.89056031e-01
+   -1.21123063e+00   3.15631240e-01]
+ [  7.95072487e-01   4.79664851e-01  -9.75235105e-02   1.81993077e-01
+   -7.63320187e-01   6.17487928e-01]
+ [  5.29306992e-01   1.77248704e-03  -2.92340083e-01   4.32649314e-01
+   -2.32121229e-01  -1.67988577e+00]
+ [  5.10276813e-01   2.32924291e-01  -2.58435752e-01   8.14943435e-01
+    3.41679483e-01  -1.80119293e+00]
+ [  5.59583996e-01  -3.83245975e-01   2.55886733e-01   8.75014084e-01
+   -1.92926039e+00  -1.04307435e+00]
+ [  6.07922544e-01  -2.59749141e-01   3.96337825e-01   1.15967987e-01
+   -1.76890987e+00  -6.82848498e-01]
+ [  8.01934956e-01   1.69429558e-01   3.53693481e-01  -8.45720417e-01
+   -1.46663198e+00   1.87784994e-01]
+ [  7.50078162e-01   4.63508654e-01   2.14471495e-02   1.71175815e+00
+    2.03755334e+00  -3.33564040e+00]
+ [  7.07865458e-01   1.64338252e-01  -3.51926811e-01   2.11837853e+00
+   -6.03516884e-01  -2.27158214e+00]
+ [  7.15462519e-01   1.80015162e-01  -3.63198154e-01   2.29159062e+00
+   -1.15768113e+00  -2.33459763e+00]
+ [  7.03630566e-01   2.10699206e-01  -3.77939276e-01   2.03853090e+00
+   -2.06087028e-01  -2.31828287e+00]
+ [  6.50000195e-01   1.94409282e-01  -3.60093649e-01   1.87564813e+00
+   -6.30968864e-01  -2.59163005e+00]
+ [  7.22282090e-01   1.12845635e-01   7.95071175e-03   1.51638264e+00
+   -9.08365684e-01  -5.30574832e-01]
+ [  7.68004614e-01   3.56879277e-01  -3.52197276e-04   1.67558413e+00
+   -5.89031422e-01  -2.62279607e-01]
+ [  5.66636925e-01   5.13249067e-01   3.40980733e-02   1.72414097e+00
+   -5.58721207e-01  -1.41535215e-01]
+ [  5.40998767e-01   4.53052731e-01   1.85504333e-01   2.02631583e+00
+   -1.29877980e+00   8.46870372e-01]
+ [  6.16788122e-01   4.86836812e-01   1.42034870e-01   1.99791173e+00
+   -1.03464417e+00   7.11955534e-01]
+ [  8.43735493e-01   4.32313650e-01   2.62141618e-01   5.72782078e-01
+   -1.15011328e+00   7.39650004e-02]
+ [  5.04145323e-01   1.13542750e-01   2.56303707e-01   9.32969614e-01
+   -1.37409021e+00   4.80248503e-01]
+ [  6.19911277e-01   2.31592376e-01   1.21904284e-01   3.90413874e-01
+   -1.86223264e+00   4.07354515e-01]
+ [  6.84489030e-01  -2.80667812e-01  -3.89248067e-02   5.93345032e-01
+   -8.74051153e-01  -1.45605288e+00]
+ [  4.05780390e-01  -4.41842078e-01   1.28725684e-01   1.86615260e-01
+   -1.00342718e+00  -2.03662909e+00]
+ [  4.31964816e-01   5.41090011e-01   3.26156721e-02   1.29825233e+00
+    1.97125636e+00  -3.19816370e+00]
+ [  8.12412394e-01   3.47818876e-02  -1.52471094e-01   6.37591562e-01
+   -5.56049034e-01  -1.34047733e+00]
+ [  7.57140418e-01  -9.32831026e-02   3.48502187e-01   9.88610569e-02
+   -1.52444923e+00   2.92057970e-01]
+ [  7.10736482e-01  -4.43386176e-01   3.46549504e-01  -1.85325915e-01
+   -1.53128549e+00  -9.27451398e-02]
+ [  2.67826983e-01  -9.04142672e-01   3.39882193e-01  -7.58563406e-01
+   -1.41928500e+00  -8.47639177e-01]
+ [  2.24468970e-01  -8.31235103e-01   3.55197465e-01  -9.26606795e-01
+   -9.86994811e-01  -1.06184591e+00]
+ [  1.88508271e-01  -6.66485733e-01   3.90565662e-01  -5.22003709e-01
+   -1.38230073e+00  -1.25565303e+00]
+ [ -1.94012550e-01  -6.01873618e-01   4.12939098e-01  -2.23367759e-01
+   -1.77579814e+00  -2.10917277e+00]
+ [ -2.98839187e-01  -8.45300438e-01   2.73444671e-02  -2.93095019e-01
+   -1.90132312e+00  -2.25584817e+00]
+ [  6.28128076e-01  -3.98552127e-01   3.31457068e-01  -3.43818967e-01
+   -1.09419006e+00  -1.06901469e+00]
+ [  7.19433618e-01  -4.24708587e-01   2.38722316e-01   5.41735295e-01
+   -1.25258011e+00  -3.13882886e-01]
+ [  7.90365467e-01  -4.82338233e-01  -8.86504226e-02  -2.25325904e-01
+   -7.62650628e-01  -6.00508731e-01]
+ [  5.18497687e-01  -5.37804266e-03  -3.05589052e-01  -4.50906706e-01
+   -1.92011129e-01   1.77475963e+00]
+ [  5.01038115e-01  -2.51526898e-01  -2.65219447e-01  -8.18658670e-01
+    4.12433799e-01   1.86484775e+00]
+ [  5.73816028e-01   3.72944873e-01   2.45616552e-01  -9.64235572e-01
+   -1.92435947e+00   1.09017944e+00]
+ [  6.10161573e-01   2.48324560e-01   3.93883960e-01  -1.91188989e-01
+   -1.81134799e+00   7.20876997e-01]
+ [  7.91154993e-01  -1.90056862e-01   3.59162246e-01   7.63253126e-01
+   -1.54226099e+00  -1.80814933e-01]
+ [  7.35758788e-01  -4.80275633e-01   2.67285781e-02  -1.53815415e+00
+    2.14925515e+00   3.34074680e+00]
+ [  7.17465106e-01  -1.66840721e-01  -3.56769320e-01  -2.15302635e+00
+   -5.34520799e-01   2.31948776e+00]
+ [  7.25671733e-01  -1.78237317e-01  -3.67126544e-01  -2.35276330e+00
+   -1.08893035e+00   2.37301848e+00]
+ [  7.11983977e-01  -2.15851545e-01  -3.82993556e-01  -2.05734960e+00
+   -1.34965755e-01   2.36820016e+00]
+ [  6.58478122e-01  -1.96598118e-01  -3.66822774e-01  -1.91069434e+00
+   -5.69245976e-01   2.64480245e+00]
+ [  7.32214150e-01  -1.15324773e-01   3.86312103e-03  -1.54225246e+00
+   -8.69130167e-01   5.91526329e-01]
+ [  7.76283818e-01  -3.63035606e-01  -4.27428940e-03  -1.69020860e+00
+   -5.43841742e-01   3.23034902e-01]
+ [  5.65970495e-01  -5.16552435e-01   2.61441572e-02  -1.75603403e+00
+   -5.19934636e-01   2.00815012e-01]
+ [  5.46085306e-01  -4.59755139e-01   1.92487164e-01  -2.06179470e+00
+   -1.23441473e+00  -7.99074791e-01]
+ [  6.22659490e-01  -4.94880205e-01   1.46760196e-01  -2.02448632e+00
+   -9.73609906e-01  -6.59924821e-01]
+ [  8.34621046e-01  -4.40285330e-01   2.67515608e-01  -6.36735872e-01
+   -1.15397724e+00  -3.74898941e-02]
+ [  5.16187389e-01  -1.29621490e-01   2.60427219e-01  -9.61556971e-01
+   -1.32484726e+00  -4.98629933e-01]
+ [  6.15226841e-01  -2.36408344e-01   1.21768489e-01  -4.51086551e-01
+   -1.88662200e+00  -3.86334504e-01]
+ [  6.84477486e-01   2.69685017e-01  -4.59263017e-02  -6.36046831e-01
+   -8.68190955e-01   1.52845218e+00]
+ [  4.11205930e-01   4.29651104e-01   1.15884494e-01  -2.57189539e-01
+   -1.01897235e+00   2.10766003e+00]
+ [  4.26050708e-01  -5.47011914e-01   2.78499588e-02  -1.23915318e+00
+    1.98277662e+00   3.21417100e+00]
+ [  8.01228355e-01  -4.14970264e-02  -1.63878244e-01  -6.48267021e-01
+   -5.28743043e-01   1.43734998e+00]]
+Executing step with covariance calculations
+Computing Jacobian.. (cycle #8) 	RMS error: 3.459    
+Errors Breakdown:
+  narrow_left_rect: 0.749491
+  wide_left_rect: 0.401794
+  wide_right_rect: 0.422575
+  tilt_laser: 0.017088
+  narrow_right_rect: 0.587709
+  prosilica_rect: 2.385647
+
+******************************
+Beginning [B - 01 - Locking Head Sensors. Estimating Arm Joint Offsets]
+[ERROR] [WallTime: 1545251369.160125] Could not find [kinect_torso] in block library. Skipping this block
+Executing step with the following Sensors:
+  rectified_cams Sensors:
+   - forearm_left_rect (9)
+   - forearm_right_rect (9)
+   - kinect_head (0)
+   - narrow_left_rect (47)
+   - narrow_right_rect (47)
+   - wide_left_rect (39)
+   - wide_right_rect (39)
+
+  chains Sensors:
+   - left_arm_chain (32)
+   - right_arm_chain (32)
+
+  tilting_lasers Sensors:
+   - tilt_laser (21)
+
+Sensor breakdown (By Sample):
+  0) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  1) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  2) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  3) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  4) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  5) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  6) tilt_laser, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  7) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  8) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  9) left_arm_chain, narrow_left_rect, narrow_right_rect
+  10) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  11) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  12) left_arm_chain, wide_left_rect, wide_right_rect
+  13) left_arm_chain, narrow_left_rect, narrow_right_rect
+  14) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  15) left_arm_chain, narrow_left_rect, narrow_right_rect
+  16) left_arm_chain, narrow_left_rect, narrow_right_rect
+  17) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  18) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  19) left_arm_chain, wide_left_rect, wide_right_rect
+  20) left_arm_chain, wide_left_rect, wide_right_rect
+  21) left_arm_chain, narrow_left_rect, narrow_right_rect
+  22) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  23) left_arm_chain, forearm_left_rect
+  24) left_arm_chain, forearm_left_rect
+  25) left_arm_chain, forearm_left_rect
+  26) left_arm_chain, forearm_left_rect
+  27) left_arm_chain, forearm_right_rect
+  28) left_arm_chain, forearm_right_rect
+  29) left_arm_chain, narrow_left_rect, narrow_right_rect, forearm_right_rect
+  30) left_arm_chain, forearm_right_rect
+  31) left_arm_chain, forearm_right_rect
+  32) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  33) tilt_laser, left_arm_chain, wide_left_rect, wide_right_rect
+  34) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect
+  35) tilt_laser, left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  36) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  37) left_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  38) left_arm_chain, narrow_left_rect, narrow_right_rect
+  39) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  40) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  41) right_arm_chain, narrow_left_rect, narrow_right_rect
+  42) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  43) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  44) right_arm_chain, wide_left_rect, wide_right_rect
+  45) right_arm_chain, narrow_left_rect, narrow_right_rect
+  46) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  47) right_arm_chain, narrow_left_rect, narrow_right_rect
+  48) right_arm_chain, narrow_left_rect, narrow_right_rect
+  49) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  50) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  51) right_arm_chain, wide_left_rect, wide_right_rect
+  52) right_arm_chain, wide_left_rect, wide_right_rect
+  53) right_arm_chain, narrow_left_rect, narrow_right_rect
+  54) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  55) right_arm_chain, forearm_right_rect
+  56) right_arm_chain, forearm_right_rect
+  57) right_arm_chain, forearm_right_rect
+  58) right_arm_chain, forearm_right_rect
+  59) right_arm_chain, forearm_left_rect
+  60) right_arm_chain, forearm_left_rect
+  61) right_arm_chain, narrow_left_rect, narrow_right_rect, forearm_left_rect
+  62) right_arm_chain, forearm_left_rect
+  63) right_arm_chain, forearm_left_rect
+  64) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  65) tilt_laser, right_arm_chain, wide_left_rect, wide_right_rect
+  66) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect
+  67) tilt_laser, right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  68) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  69) right_arm_chain, narrow_left_rect, narrow_right_rect, wide_left_rect, wide_right_rect
+  70) right_arm_chain, narrow_left_rect, narrow_right_rect
+Pose Guesses:
+[[  2.82745948e+00   5.39354888e-02  -3.81378978e-01  -1.21891346e+00
+   -1.04883089e+00   1.13376277e+00]
+ [  2.81631646e+00  -5.14594365e-01  -3.82347829e-01  -1.13686092e+00
+   -1.14854358e+00   1.25410386e+00]
+ [  2.73549328e+00   4.96641889e-01  -3.78451094e-01  -1.16594863e+00
+   -1.12489531e+00   1.22040073e+00]
+ [  2.44412108e+00   2.20823857e-03  -5.44759914e-01  -4.34416125e-01
+   -4.56599129e-01   1.55671638e+00]
+ [  1.79175362e+00  -9.55939416e-03  -3.34930968e-01  -1.19295281e+00
+   -1.18980171e+00   1.21322445e+00]
+ [  1.74332020e+00  -1.28670172e-01  -3.33092226e-01  -1.12846793e+00
+   -1.19209674e+00   1.27867945e+00]
+ [  1.72015154e+00   1.43427688e-01  -3.32419674e-01  -1.12811645e+00
+   -1.20380127e+00   1.28236688e+00]
+ [  7.62380001e-01   8.50801524e-02   3.46157513e-01  -1.81937033e-01
+   -1.48261688e+00  -2.64176186e-01]
+ [  7.18890013e-01   4.41874696e-01   3.43967948e-01   9.97845181e-02
+   -1.49863049e+00   1.30380840e-01]
+ [  2.72990654e-01   9.11221334e-01   3.37812409e-01   6.70999941e-01
+   -1.42971475e+00   8.93588633e-01]
+ [  2.28523646e-01   8.32209796e-01   3.51160568e-01   8.71708230e-01
+   -9.90918052e-01   1.09338887e+00]
+ [  1.96354711e-01   6.54612708e-01   3.90951000e-01   5.05780029e-01
+   -1.40094574e+00   1.25000914e+00]
+ [ -1.86368270e-01   5.94133366e-01   4.16777647e-01   2.10926185e-01
+   -1.81868216e+00   2.09322501e+00]
+ [ -2.94128919e-01   8.56012634e-01   2.77040931e-02   2.13580880e-01
+   -1.91800433e+00   2.25220907e+00]
+ [  6.29842618e-01   3.82763663e-01   3.31541389e-01   3.21875175e-01
+   -1.11318920e+00   1.06548886e+00]
+ [  7.24743714e-01   4.10089033e-01   2.35836630e-01  -5.89081527e-01
+   -1.21122997e+00   3.15607596e-01]
+ [  7.95071700e-01   4.79663748e-01  -9.75227341e-02   1.82009660e-01
+   -7.63314468e-01   6.17496469e-01]
+ [  5.29315440e-01   1.77153841e-03  -2.92356578e-01   4.32719939e-01
+   -2.32223448e-01  -1.67987641e+00]
+ [  5.10277656e-01   2.32924070e-01  -2.58436968e-01   8.14935875e-01
+    3.41676820e-01  -1.80119718e+00]
+ [  5.59593442e-01  -3.83251825e-01   2.55882100e-01   8.75000832e-01
+   -1.92924586e+00  -1.04309035e+00]
+ [  6.07933853e-01  -2.59753908e-01   3.96335759e-01   1.15958504e-01
+   -1.76884783e+00  -6.82866819e-01]
+ [  8.01920289e-01   1.69426341e-01   3.53696640e-01  -8.45743141e-01
+   -1.46663702e+00   1.87763330e-01]
+ [  7.50071325e-01   4.63503609e-01   2.14523911e-02   1.71182707e+00
+    2.03749704e+00  -3.33566573e+00]
+ [  7.07865458e-01   1.64338252e-01  -3.51926811e-01   2.11837853e+00
+   -6.03516884e-01  -2.27158214e+00]
+ [  7.15462519e-01   1.80015162e-01  -3.63198154e-01   2.29159062e+00
+   -1.15768113e+00  -2.33459763e+00]
+ [  7.03630566e-01   2.10699206e-01  -3.77939276e-01   2.03853090e+00
+   -2.06087028e-01  -2.31828287e+00]
+ [  6.50000195e-01   1.94409282e-01  -3.60093649e-01   1.87564813e+00
+   -6.30968864e-01  -2.59163005e+00]
+ [  7.22282090e-01   1.12845635e-01   7.95071175e-03   1.51638264e+00
+   -9.08365684e-01  -5.30574832e-01]
+ [  7.68004614e-01   3.56879277e-01  -3.52197276e-04   1.67558413e+00
+   -5.89031422e-01  -2.62279607e-01]
+ [  5.66642056e-01   5.13252781e-01   3.40935913e-02   1.72413315e+00
+   -5.58721061e-01  -1.41539763e-01]
+ [  5.40998767e-01   4.53052731e-01   1.85504333e-01   2.02631583e+00
+   -1.29877980e+00   8.46870372e-01]
+ [  6.16788122e-01   4.86836812e-01   1.42034870e-01   1.99791173e+00
+   -1.03464417e+00   7.11955534e-01]
+ [  8.43713923e-01   4.32301881e-01   2.62148421e-01   5.73213746e-01
+   -1.15010354e+00   7.42627380e-02]
+ [  5.04145346e-01   1.13542290e-01   2.56303766e-01   9.32967158e-01
+   -1.37409075e+00   4.80246538e-01]
+ [  6.19915778e-01   2.31593480e-01   1.21901340e-01   3.90411436e-01
+   -1.86222518e+00   4.07354594e-01]
+ [  6.84495617e-01  -2.80671312e-01  -3.89306145e-02   5.93298676e-01
+   -8.74036373e-01  -1.45608182e+00]
+ [  4.05782856e-01  -4.41845286e-01   1.28722676e-01   1.86637107e-01
+   -1.00342346e+00  -2.03662117e+00]
+ [  4.31970945e-01   5.41096871e-01   3.26083468e-02   1.29819176e+00
+    1.97119859e+00  -3.19822239e+00]
+ [  8.12422095e-01   3.47811306e-02  -1.52480110e-01   6.37537581e-01
+   -5.56115748e-01  -1.34051204e+00]
+ [  7.58287089e-01  -9.34192752e-02   3.48300490e-01   1.01200356e-01
+   -1.52993271e+00   2.93701142e-01]
+ [  7.14176290e-01  -4.45890966e-01   3.45656248e-01  -1.90340567e-01
+   -1.53273888e+00  -9.70054680e-02]
+ [  2.67818542e-01  -9.04116325e-01   3.39887682e-01  -7.58505957e-01
+   -1.41935226e+00  -8.47561782e-01]
+ [  2.24463943e-01  -8.31218371e-01   3.55201148e-01  -9.26575067e-01
+   -9.86847267e-01  -1.06194024e+00]
+ [  1.88505012e-01  -6.66476708e-01   3.90567690e-01  -5.21927874e-01
+   -1.38229649e+00  -1.25561089e+00]
+ [ -1.94014526e-01  -6.01879626e-01   4.12938115e-01  -2.23393424e-01
+   -1.77578633e+00  -2.10920415e+00]
+ [ -2.98851349e-01  -8.45329841e-01   2.73250964e-02  -2.93118414e-01
+   -1.90124575e+00  -2.25594042e+00]
+ [  6.28125481e-01  -3.98550824e-01   3.31457987e-01  -3.43803927e-01
+   -1.09415362e+00  -1.06901755e+00]
+ [  7.19450822e-01  -4.24719618e-01   2.38714820e-01   5.41709493e-01
+   -1.25257824e+00  -3.13907125e-01]
+ [  7.90391885e-01  -4.82354684e-01  -8.86728438e-02  -2.25238048e-01
+   -7.62840467e-01  -6.00428614e-01]
+ [  5.18503438e-01  -5.37896917e-03  -3.05600773e-01  -4.50843964e-01
+   -1.92161762e-01   1.77478958e+00]
+ [  5.01047120e-01  -2.51532828e-01  -2.65238024e-01  -8.18650284e-01
+    4.12357796e-01   1.86487397e+00]
+ [  5.73811363e-01   3.72941652e-01   2.45619167e-01  -9.64242529e-01
+   -1.92436539e+00   1.09017123e+00]
+ [  6.10153828e-01   2.48320905e-01   3.93885652e-01  -1.91201019e-01
+   -1.81138270e+00   7.20860922e-01]
+ [  7.91175978e-01  -1.90062907e-01   3.59157915e-01   7.63221757e-01
+   -1.54225108e+00  -1.80845147e-01]
+ [  7.35777535e-01  -4.80289594e-01   2.67144024e-02  -1.53793668e+00
+    2.14918509e+00   3.34087396e+00]
+ [  7.17465106e-01  -1.66840721e-01  -3.56769320e-01  -2.15302635e+00
+   -5.34520799e-01   2.31948776e+00]
+ [  7.25671733e-01  -1.78237317e-01  -3.67126544e-01  -2.35276330e+00
+   -1.08893035e+00   2.37301848e+00]
+ [  7.11983977e-01  -2.15851545e-01  -3.82993556e-01  -2.05734960e+00
+   -1.34965755e-01   2.36820016e+00]
+ [  6.58478122e-01  -1.96598118e-01  -3.66822774e-01  -1.91069434e+00
+   -5.69245976e-01   2.64480245e+00]
+ [  7.32214150e-01  -1.15324773e-01   3.86312103e-03  -1.54225246e+00
+   -8.69130167e-01   5.91526329e-01]
+ [  7.76283818e-01  -3.63035606e-01  -4.27428940e-03  -1.69020860e+00
+   -5.43841742e-01   3.23034902e-01]
+ [  5.65979015e-01  -5.16561003e-01   2.61354638e-02  -1.75602110e+00
+   -5.19930864e-01   2.00820785e-01]
+ [  5.46085306e-01  -4.59755139e-01   1.92487164e-01  -2.06179470e+00
+   -1.23441473e+00  -7.99074791e-01]
+ [  6.22659490e-01  -4.94880205e-01   1.46760196e-01  -2.02448632e+00
+   -9.73609906e-01  -6.59924821e-01]
+ [  8.34647462e-01  -4.40299901e-01   2.67507252e-01  -6.36551352e-01
+   -1.15391344e+00  -3.73893477e-02]
+ [  5.16188588e-01  -1.29622292e-01   2.60426819e-01  -9.61556749e-01
+   -1.32484538e+00  -4.98630723e-01]
+ [  6.15226950e-01  -2.36408885e-01   1.21768492e-01  -4.51086326e-01
+   -1.88662194e+00  -3.86334624e-01]
+ [  6.84501074e-01   2.69693671e-01  -4.59470744e-02  -6.35844704e-01
+   -8.68194972e-01   1.52856817e+00]
+ [  4.11209352e-01   4.29653887e-01   1.15881016e-01  -2.57219545e-01
+   -1.01897436e+00   2.10764614e+00]
+ [  4.26053357e-01  -5.47016140e-01   2.78459821e-02  -1.23912564e+00
+    1.98273843e+00   3.21420596e+00]
+ [  8.01237876e-01  -4.14983580e-02  -1.63887545e-01  -6.48196220e-01
+   -5.28902030e-01   1.43740276e+00]]
+Executing step with covariance calculations
+Computing Jacobian.. (cycle #8) 	RMS error: 4.580     
+Errors Breakdown:
+  narrow_left_rect: 0.772746
+  left_arm_chain: 0.006300
+  wide_left_rect: 0.486845
+  forearm_left_rect: 1.751999
+  wide_right_rect: 0.444004
+  forearm_right_rect: 1.633448
+  tilt_laser: 0.016162
+  right_arm_chain: 0.006204
+  narrow_right_rect: 0.750383
+[INFO] [WallTime: 1545251548.525418] Writing original urdf to robot_uncalibrated_2018_12_19_15_14.xml
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Joint removed: right_arm_chain_cb
+ xyz: [0.2849263407317102, 0.003480000485856619, -0.003303782370654984]
+ rpy: (-1.5710529274489589, 0.03820479024271043, -0.002481165717582664)
+Updating calibration for l_shoulder_pan_joint by -0.00961254649006
+Updating xyz for laser_tilt_joint 
+ old: [0.0, 0.0, 0.039715068061] 
+ new: [0.0, 0.0, 0.04609583075879857]
+Updating rpy for laser_tilt_joint 
+ old: [0.0, -0.0, 0.002029068478] 
+ new: (0.0, 0.0, -0.0068945485672505585)
+Updating calibration for laser_tilt_mount_joint by 0.00739593652072
+Updating calibration for r_forearm_roll_joint by -0.00414382072635
+Updating xyz for high_def_frame_joint 
+ old: [0.055052546438, -0.106926469653, 0.064795770443] 
+ new: [0.059389572342078284, -0.10422679772397385, 0.06837112293348746]
+Updating rpy for high_def_frame_joint 
+ old: [-0.000321915152, 0.002898289427, 0.006337556665] 
+ new: (-5.592367743064636e-05, 0.011849406295488848, 0.001447544456123646)
+Updating calibration for r_shoulder_lift_joint by 0.00245438476516
+Updating calibration for r_wrist_roll_joint by -3.14760996104
+Updating calibration for l_forearm_roll_joint by 0.00272270504368
+Updating calibration for l_shoulder_lift_joint by 0.00145307785233
+Updating calibration for head_pan_joint by -0.00528769179058
+Updating xyz for narrow_stereo_frame_joint 
+ old: [0.048005647757, 0.059675774387, 0.060333834462] 
+ new: [0.04229002466969492, 0.060158401587048674, 0.06486674321066004]
+Updating rpy for narrow_stereo_frame_joint 
+ old: [-0.00240091234, 0.019953651265, -0.001092389327] 
+ new: (-0.0023689936246523977, 0.027637956998213004, -0.0010623381698116967)
+Updating xyz for r_forearm_cam_frame_joint 
+ old: [0.136817397124, -0.005813504857, 0.0472805479] 
+ new: [0.138263279644115, -0.009616343941767077, 0.04986248649828069]
+Updating rpy for r_forearm_cam_frame_joint 
+ old: [1.548700793854, -0.485278401302, 0.005172392519] 
+ new: (1.5316889632295196, -0.4861190593088724, 0.01885654266321947)
+Joint removed: left_arm_chain_cb
+ xyz: [0.28180385290736953, -0.0069198011365926605, 0.0025087496027000385]
+ rpy: (1.5708325581344373, -0.020819098552210837, 0.0025505281520718922)
+Updating calibration for r_upper_arm_roll_joint by 0.00801407754203
+Updating calibration for r_wrist_flex_joint by 0.00213122521072
+Updating xyz for l_forearm_cam_frame_joint 
+ old: [0.137447481903, 0.005340697189, 0.026894054709] 
+ new: [0.14544119064497754, 0.008733342374000058, 0.03856601542857019]
+Updating rpy for l_forearm_cam_frame_joint 
+ old: [-1.542816707285, -0.610263464087, 0.002157847471] 
+ new: (-1.5197751496384861, -0.5623812788178933, -0.04074728095810607)
+Updating calibration for r_shoulder_pan_joint by -0.00640833112493
+Updating calibration for l_wrist_roll_joint by 3.13967980156
+Updating xyz for wide_stereo_frame_joint 
+ old: [0.046644975787, 0.029704483165, 0.060242505656] 
+ new: [0.043119625745431184, 0.030256216177821763, 0.06470160732134123]
+Updating rpy for wide_stereo_frame_joint 
+ old: [-0.0002849731, 0.015915251591, -0.019749019345] 
+ new: (0.00020471162647216809, 0.023611020350155595, -0.012256343751748966)
+Updating calibration for l_wrist_flex_joint by 0.0366104879029
+Updating calibration for l_upper_arm_roll_joint by -0.00952584926104
+The following joints weren't updated: 
+r_gripper_motor_accelerometer_joint, r_gripper_tool_joint, wide_stereo_gazebo_l_stereo_camera_frame_joint, r_gripper_palm_joint, narrow_stereo_gazebo_l_stereo_camera_optical_frame_joint, head_plate_frame_joint, wide_stereo_gazebo_r_stereo_camera_frame_joint, narrow_stereo_gazebo_r_stereo_camera_frame_joint, br_caster_l_wheel_joint, r_gripper_l_finger_tip_joint, head_mount_asus_rgb_optical_frame_joint, head_mount_kinect2_rgb_optical_frame_joint, r_elbow_flex_joint, torso_lift_joint, narrow_stereo_optical_frame_joint, high_def_optical_frame_joint, r_gripper_l_finger_joint, l_gripper_r_finger_tip_joint, head_mount_prosilica_optical_frame_joint, imu_joint, l_gripper_motor_accelerometer_joint, fl_caster_rotation_joint, head_mount_kinect2_joint, l_gripper_motor_screw_joint, r_gripper_led_joint, double_stereo_frame_joint, head_mount_asus_ir_optical_frame_joint, r_gripper_motor_slider_joint, r_gripper_joint, bl_caster_rotation_joint, fl_caster_r_wheel_joint, narrow_stereo_gazebo_r_stereo_camera_optical_frame_joint, head_mount_joint, head_mount_asus_rgb_joint, projector_wg6802418_frame_joint, l_upper_arm_joint, l_forearm_cam_optical_frame_joint, head_tilt_joint, fr_caster_l_wheel_joint, head_mount_prosilica_joint, r_forearm_cam_optical_frame_joint, l_forearm_joint, narrow_stereo_gazebo_l_stereo_camera_frame_joint, wide_stereo_gazebo_r_stereo_camera_optical_frame_joint, fl_caster_l_wheel_joint, wide_stereo_gazebo_l_stereo_camera_optical_frame_joint, l_gripper_tool_joint, l_gripper_motor_slider_joint, l_gripper_led_joint, br_caster_r_wheel_joint, r_gripper_motor_screw_joint, wide_stereo_optical_frame_joint, l_gripper_palm_joint, sensor_mount_frame_joint, fr_caster_rotation_joint, torso_lift_motor_screw_joint, head_mount_kinect2_ir_optical_frame_joint, l_gripper_l_finger_joint, bl_caster_l_wheel_joint, head_mount_kinect2_ir_joint, base_bellow_joint, r_gripper_r_finger_tip_joint, l_elbow_flex_joint, base_laser_joint, head_mount_kinect2_rgb_joint, fr_caster_r_wheel_joint, r_gripper_r_finger_joint, bl_caster_r_wheel_joint, l_torso_lift_side_plate_joint, l_gripper_joint, r_upper_arm_joint, r_forearm_joint, l_gripper_l_finger_tip_joint, br_caster_rotation_joint, base_footprint_joint, r_torso_lift_side_plate_joint, l_gripper_r_finger_joint, projector_wg6802418_child_frame_joint
+[INFO] [WallTime: 1545251548.536422] Writing updates to robot_calibrated_2018_12_19_15_14.xml
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+Material has neither a color nor texture
+cp: cannot create regular file '/hwlog/cal_measurements_2018-12-19-15-32-29.bag': Permission denied
+Copied measurements to: /hwlog/cal_measurements_2018-12-19-15-32-29.bag
