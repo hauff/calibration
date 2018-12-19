@@ -1,5 +1,5 @@
-before: epipolar error: 0.343016 pixels   dimension: 0.024326 m
-after:	epipolar error: 0.058039 pixels   dimension: 0.024608 m
+before: epipolar error: 0.327508 pixels   dimension: 0.106311 m
+after:	epipolar error: 0.042344 pixels   dimension: 0.107984 m
 
 Left:
 ('D = ', [-0.45380041652341363, 0.22001229881893766, 0.0002747589243530653, 0.00023619080426236908, 0.0])
