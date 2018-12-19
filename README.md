@@ -8,6 +8,12 @@
 
 https://answers.ros.org/question/228693/image_view-symbol-lookup-error/
 
+### Wide Stereo
+```
+rosrun camera_calibration cameracheck.py stereo:=wide_stereo --size=7x6 --square=0.108
+roslaunch pr2_calibration_launch calibrate_wide_stereo.launch
+```
+
 ### Camera Calibration with [Kalibr](https://github.com/ethz-asl/kalibr/wiki)
 
 #### Multiple Camera Calibration
